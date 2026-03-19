@@ -6,11 +6,10 @@ import os
 import musicLibary
 import pywhatkit
 import pyautogui
-from client import ask_ai      # 👈 Now using Mistral
-from whatapp import contacts   # WhatsApp contact list
+from client import ask_ai      
+from whatapp import contacts   
 
 
-# ✅ Text-to-speech
 def speak(text):
     try:
         print("Assistant:", text)
@@ -24,7 +23,6 @@ def speak(text):
         print("Speech Error:", e)
 
 
-# ✅ Process Commands
 def processCommand(c):
     c = c.lower()
 
@@ -83,7 +81,6 @@ def processCommand(c):
         speak("Sorry, I didn’t understand that.")
 
 
-# ✅ Voice Assistant Loop
 if __name__ == "__main__":
     speak("Voice assistant activated. Say 'google' to start.")
     recognizer = sr.Recognizer()
